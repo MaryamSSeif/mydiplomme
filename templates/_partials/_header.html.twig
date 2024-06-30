@@ -205,18 +205,16 @@
                 <ul>
                     <li><a href="{{ path ('app_home') }}">Accueil</a></li>
 
+                  <li class="menu-item-has-children">
+                    <a href="#">Category</a>
+                    <ul class="sub-menu">
                     {% for categorie in category %}
-                        <li class="menu-item-has-children">
-                            <a href="contact.html">{{ categorie.name }}</a>
-
                             {% for sousCategorie in categorie.categories %}
-                                <ul>
                                     <li><a href="contact.html">{{ sousCategorie.name }}</a></li>
-                                </ul>
-                            {% endfor %}
-
-                        </li>
+                            {% endfor %}                              
                     {% endfor %}
+                    </ul>  
+                    </li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
@@ -296,23 +294,24 @@
                         </div>
                         <div class="col-auto">
                             <nav class="main-menu d-none d-lg-inline-block">
-
                                 <ul>
-                                    <li><a href="{{ path('app_home') }}">Accueil</a></li>
-
+                                    <li ><a href="{{ path('app_home') }}">Accueil</a></li>
+                
+                                    <li class="menu-item-has-children">
+                                    
+                                     <a href="contact.html">Categories</a>
+                                     <ul class="sub-menu">
                                     {% for categorie in category %}
-                                        <li class="menu-item-has-children">
-                                            <a href="contact.html">{{ categorie.name }}</a>
-
-                                            {% for sousCategorie in categorie.categories %}
-                                                <ul class="sub-menu">
-                                                    <li><a href="contact.html">{{ sousCategorie.name }}</a></li>
-                                                </ul>
-                                            {% endfor %}
-
-                                        </li>
+                                        <li><a href={{ "category/#{categorie.id}" }}>{{ categorie.name}}</a></li>
                                     {% endfor %}
-                                    <li><a href="contact.html">Contact</a></li>
+                                    </ul>
+                                    </li>
+                                    
+                               
+                                    <li class="menu-item-has-children"><a href="blog.html">Blog</a></li>
+                                    <li class="menu-item-has-children"><a href="blog.html">Pages</a></li>
+                                    <li ><a href="contact.html">Contact</a></li>
+    
                                 </ul>
                             </nav>
                         </div>
