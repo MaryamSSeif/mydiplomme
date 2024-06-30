@@ -40,69 +40,8 @@
             </div>
         </div>
     </div><!--==============================
-    Sidemenu
-============================== -->
-    <div class="sidemenu-wrapper cart-side-menu d-none d-lg-block ">
-        <div class="sidemenu-content">
-            <button class="closeButton sideMenuCls"><i class="far fa-times"></i></button>
-            <div class="widget woocommerce widget_shopping_cart">
-                <h3 class="widget_title">Shopping cart</h3>
-                <div class="widget_shopping_cart_content">
-                    <ul class="woocommerce-mini-cart cart_list product_list_widget ">
-                        <li class="woocommerce-mini-cart-item mini_cart_item">
-                            <a href="#" class="remove remove_from_cart_button"><i class="far fa-times"></i></a>
-                            <a href="#"><img src="assets/img/product/product_thumb_1_1.png" alt="Cart Image">Car Safety Seat</a>
-                            <span class="quantity">1 ×
-                                <span class="woocommerce-Price-amount amount">
-                                    <span class="woocommerce-Price-currencySymbol">$</span>940.00</span>
-                            </span>
-                        </li>
-                        <li class="woocommerce-mini-cart-item mini_cart_item">
-                            <a href="#" class="remove remove_from_cart_button"><i class="far fa-times"></i></a>
-                            <a href="#"><img src="assets/img/product/product_thumb_1_2.png" alt="Cart Image">Bus Safety Hammer</a>
-                            <span class="quantity">1 ×
-                                <span class="woocommerce-Price-amount amount">
-                                    <span class="woocommerce-Price-currencySymbol">$</span>899.00</span>
-                            </span>
-                        </li>
-                        <li class="woocommerce-mini-cart-item mini_cart_item">
-                            <a href="#" class="remove remove_from_cart_button"><i class="far fa-times"></i></a>
-                            <a href="#"><img src="assets/img/product/product_thumb_1_3.png" alt="Cart Image">Car Steering Wheel</a>
-                            <span class="quantity">1 ×
-                                <span class="woocommerce-Price-amount amount">
-                                    <span class="woocommerce-Price-currencySymbol">$</span>756.00</span>
-                            </span>
-                        </li>
-                        <li class="woocommerce-mini-cart-item mini_cart_item">
-                            <a href="#" class="remove remove_from_cart_button"><i class="far fa-times"></i></a>
-                            <a href="#"><img src="assets/img/product/product_thumb_1_4.png" alt="Cart Image">Transponder Car Key</a>
-                            <span class="quantity">1 ×
-                                <span class="woocommerce-Price-amount amount">
-                                    <span class="woocommerce-Price-currencySymbol">$</span>723.00</span>
-                            </span>
-                        </li>
-                        <li class="woocommerce-mini-cart-item mini_cart_item">
-                            <a href="#" class="remove remove_from_cart_button"><i class="far fa-times"></i></a>
-                            <a href="#"><img src="assets/img/product/product_thumb_1_5.png" alt="Cart Image">Safety Hand Glove</a>
-                            <span class="quantity">1 ×
-                                <span class="woocommerce-Price-amount amount">
-                                    <span class="woocommerce-Price-currencySymbol">$</span>1080.00</span>
-                            </span>
-                        </li>
-                    </ul>
-                    <p class="woocommerce-mini-cart__total total">
-                        <strong>Subtotal:</strong>
-                        <span class="woocommerce-Price-amount amount">
-                            <span class="woocommerce-Price-currencySymbol">$</span>4398.00</span>
-                    </p>
-                    <p class="woocommerce-mini-cart__buttons buttons">
-                        <a href="cart.html" class="th-btn wc-forward">View cart</a>
-                        <a href="checkout.html" class="th-btn checkout wc-forward">Checkout</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div><!--==============================
+
+
     Sidemenu
 ============================== -->
     <div class="sidemenu-wrapper sidemenu-1 d-none d-md-block ">
@@ -294,8 +233,18 @@
                         </div>
                         <div class="col-auto">
                             <nav class="main-menu d-none d-lg-inline-block">
+                              
                                 <ul>
-                                    <li ><a href="{{ path('app_home') }}">Accueil</a></li>
+                                 <li class="menu-item-has-children">
+                                        <a href="home-newspaper.html">Home</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="home-newspaper.html">Home Newspaper</a></li>
+                                            <li><a href="home-magazine.html">Home Magazine</a></li>
+                                            <li><a href="home-sports.html">Home Sports</a></li>
+                                            <li><a href="home-movie.html">Home Movie</a></li>
+                                            <li><a href="home-gadget.html">Home Gadget</a></li>
+                                        </ul>
+                                    </li>
                 
                                     <li class="menu-item-has-children">
                                     
@@ -307,9 +256,23 @@
                                     </ul>
                                     </li>
                                     
+                                  
                                
-                                    <li class="menu-item-has-children"><a href="blog.html">Blog</a></li>
-                                    <li class="menu-item-has-children"><a href="blog.html">Pages</a></li>
+                                    <li class="menu-item-has-children">
+                                        <a href="#">Blog</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="blog.html">Blog Standard</a></li>
+                                            <li><a href="blog-masonary.html">Blog Masonary</a></li>
+                                            <li><a href="blog-list.html">Blog List</a></li>
+                                            <li><a href="blog-details.html">Blog Details</a></li>
+                                            <li><a href="blog-details-video.html">Blog Details Video</a></li>
+                                            <li><a href="blog-details-audio.html">Blog Details Audio</a></li>
+                                            <li><a href="blog-details-nosidebar.html">Blog Details Nosidebar</a></li>
+                                            <li><a href="blog-details-full-img.html">Blog Details Full Image</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="about.html">About Us</a></li>
+
                                     <li ><a href="contact.html">Contact</a></li>
     
                                 </ul>
@@ -318,10 +281,7 @@
                         <div class="col-auto">
                             <div class="header-button">
                                 <button type="button" class="simple-icon searchBoxToggler"><i class="far fa-search"></i></button>
-                                <button type="button" class="simple-icon d-none d-lg-block cartToggler">
-                                    <i class="far fa-cart-shopping"></i>
-                                    <span class="badge">5</span>
-                                </button>
+                               
                                 <a href="#" class="icon-btn sideMenuToggler d-none d-lg-block"><i class="far fa-bars"></i></a>
                                 <button type="button" class="th-menu-toggle d-block d-lg-none"><i class="far fa-bars"></i></button>
                             </div>
