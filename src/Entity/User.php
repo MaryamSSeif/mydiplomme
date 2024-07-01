@@ -7,15 +7,17 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 
+
 #[ORM\Entity(repositoryClass: UserRepository::class)]
 #[ORM\UniqueConstraint(name: 'UNIQ_IDENTIFIER_EMAIL', fields: ['email'])]
 class User implements UserInterface, PasswordAuthenticatedUserInterface
+
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
     private ?int $id = null;
-
+    
     #[ORM\Column(length: 180)]
     private ?string $email = null;
 
@@ -28,6 +30,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     /**
      * @var string The hashed password
      */
+    
     #[ORM\Column]
     private ?string $password = null;
 
@@ -120,4 +123,36 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
         return $this;
     }
+  
+   #[ORM\Column(name: "is_verified")]
+   private bool $isVerified = false;
+
+   public function setIsVerified(bool $verified): self
+   {
+       $this->isVerified = $verified;
+
+       return $this; // Allow method chaining (optional)
+   }
+
+    // ... other properties and methods
+
+    /**
+     * @var string|null
+     */
+    private ?string $apiToken = null;
+
+    public function getApiToken(): ?string
+    {
+        return $this->apiToken;
+    }
+
+    // Consider a setter if needed:
+
+    public function setApiToken(?string $apiToken): self
+    {
+        $this->apiToken = $apiToken;
+
+        return $this;
+    }
 }
+
